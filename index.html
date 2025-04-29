@@ -21,41 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="proyecto_tesis_files/libs/clipboard/clipboard.min.js"></script>
@@ -103,29 +89,78 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="quarto" class="level2">
-<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
-<p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
+<section id="título" class="level2">
+<h2 class="anchored" data-anchor-id="título">1. Título</h2>
+<p>Aplicación de IA en imágenes para evaluar biofertilizantes en germinación de <em>Pisum sativum</em> L.</p>
 </section>
-<section id="running-code" class="level2">
-<h2 class="anchored" data-anchor-id="running-code">Running Code</h2>
-<p>When you click the <strong>Render</strong> button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
-<p>You can add options to executable code like this</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
-</div>
-</div>
-<p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
+<section id="problema-de-investigación" class="level2">
+<h2 class="anchored" data-anchor-id="problema-de-investigación">2. Problema de investigación</h2>
+<p>El incremento de la población mundial y el cambio climático trae consigo un alza en la demanda de productos alimenticios generando una fuerte presión sobre el saturado sector agrícola (<span class="citation" data-cites="singh-2025">Singh et al. (<a href="#ref-singh-2025" role="doc-biblioref">2025</a>)</span>). Ante esto, la calidad de las semillas es un elemento crucial que está estrechamente relacionada con la tasa de germinación, el rendimiento de la planta y la tolerancia a los desafíos bióticos y abióticos, siendo crucial para la agricultura y el desarrollo de las plántulas, asegurando una alta producción y mayores ganancias (<span class="citation" data-cites="de-medeiros-2020">De Medeiros et al. (<a href="#ref-de-medeiros-2020" role="doc-biblioref">2020</a>)</span>). Por lo tanto, la industria de las semillas busca constantemente formas de describir los atributos de calidad de las semillas con precisión, empleando varios métodos para verificar los parámetros de calidad de las semillas, como las pruebas de germinación, viabilidad y vigor (McDonald, 1998).</p>
+<p>Sin embargo, realizar pruebas ininterrumpidas puede ser un reto, debido a limitaciones tecnológicas y de tiempo, puede ser difícil evaluar directamente la salud, la viabilidad, los daños y el vigor de las semillas (<span class="citation" data-cites="elmasry-2019">ElMasry et al. (<a href="#ref-elmasry-2019" role="doc-biblioref">2019</a>)</span>). Puesto que las técnicas aplicadas para las pruebas de calidad de las semillas suelen verse afectadas por limitaciones de tiempo, problemas de subjetividad y la naturaleza destructiva (<span class="citation" data-cites="rao-2016">Rao et al. (<a href="#ref-rao-2016" role="doc-biblioref">2016</a>)</span>). En las pruebas tradicionales de la calidad de las semillas de arveja en un laboratorio, las personas inspeccionan visualmente cada semilla individualmente, lo cual es laborioso y requiere mucho tiempo. Por lo tanto, necesitamos estrategias eficaces que permitan determinar la calidad de las semillas de forma rápida, precisa, no destructiva y objetiva, ya que las técnicas visuales y manuales son costosas, requieren mucho tiempo y producen resultados poco fiables. Tanto la Asociación Internacional de Análisis de Semillas (ISTA) como la Asociación de Analistas Oficiales de Semillas (AOSA) reconocen la importancia de crear nuevos métodos para la evaluación rápida y no destructiva de la calidad de las semillas, con el fin de optimizar los análisis de calidad y reducir el coste total de las pruebas laboriosas (<span class="citation" data-cites="boelt-2018">Boelt et al. (<a href="#ref-boelt-2018" role="doc-biblioref">2018</a>)</span>). Por eso, se deberían integrar técnicas de evaluación de la calidad más precisas y rápidas con mínima participación humana para obtener la mayor cantidad de semillas aptas para la producción.</p>
+<p>En este contexto, se plantea la siguiente pregunta de investigación: ¿Cómo pueden los modelos de inteligencia artificial aplicados a la segmentación y clasificación de imágenes mejorar la evaluación del efecto de tres biofertilizantes sobre la germinación de semillas de <em>Pisum sativum</em> L.?</p>
+</section>
+<section id="objetivos" class="level2">
+<h2 class="anchored" data-anchor-id="objetivos">3. Objetivos</h2>
+<section id="objetivo-general" class="level3">
+<h3 class="anchored" data-anchor-id="objetivo-general">3.1. Objetivo general</h3>
+<ul>
+<li>Desarrollar un modelo de Deep Learning para evaluación del proceso de germinación de semillas de arveja.</li>
+</ul>
+</section>
+<section id="objetivos-específicos-de-corresponder" class="level3">
+<h3 class="anchored" data-anchor-id="objetivos-específicos-de-corresponder">3.2. Objetivos específicos (de corresponder)</h3>
+<ul>
+<li><p>Desarrollo de un modelo de segmentación y clasificación para extracción de parámetros de imágenes de germinación de semillas de arveja.</p></li>
+<li><p>Evaluar la precisión del modelo con los resultados obtenidos en un experimento de germinación en el cultivo de arvejas.</p></li>
+</ul>
+</section>
+</section>
+<section id="antecedentes-de-la-investigación" class="level2">
+<h2 class="anchored" data-anchor-id="antecedentes-de-la-investigación">4. Antecedentes de la investigación</h2>
+</section>
+<section id="hipótesis-de-corresponder" class="level2">
+<h2 class="anchored" data-anchor-id="hipótesis-de-corresponder">5. Hipótesis (de corresponder)</h2>
+</section>
+<section id="metodología" class="level2">
+<h2 class="anchored" data-anchor-id="metodología">6. Metodología</h2>
+<section id="población-muestra-y-muestreo-de-corresponder" class="level3">
+<h3 class="anchored" data-anchor-id="población-muestra-y-muestreo-de-corresponder">6.1. Población, muestra y muestreo (de corresponder)</h3>
+</section>
+<section id="variables-de-estudio-de-corresponder" class="level3">
+<h3 class="anchored" data-anchor-id="variables-de-estudio-de-corresponder">6.2. Variables de estudio (de corresponder)</h3>
+</section>
+<section id="métodos" class="level3">
+<h3 class="anchored" data-anchor-id="métodos">6.3.Métodos</h3>
+</section>
+<section id="cronograma" class="level3">
+<h3 class="anchored" data-anchor-id="cronograma">6.4.Cronograma</h3>
+</section>
+<section id="análisis-de-datos" class="level3">
+<h3 class="anchored" data-anchor-id="análisis-de-datos">6.5.Análisis de datos</h3>
+</section>
+</section>
+<section id="refrencias-bibliográficas" class="level2 unnumbered">
+
+
 </section>
 
-</main>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Refrencias bibliográficas</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-boelt-2018" class="csl-entry" role="listitem">
+Boelt, B., Shrestha, S., Salimi, Z., Jørgensen, J. R., Nicolaisen, M., &amp; Carstensen, J. M. (2018). <span class="nocase">Multispectral imaging – a new tool in seed quality assessment?</span> <em>Seed Science Research</em>, <em>28</em>(3), 222–228. <a href="https://doi.org/10.1017/s0960258518000235">https://doi.org/10.1017/s0960258518000235</a>
+</div>
+<div id="ref-de-medeiros-2020" class="csl-entry" role="listitem">
+De Medeiros, A. D., Da Silva, L. J., Ribeiro, J. P. O., Ferreira, K. C., Rosas, J. T. F., Santos, A. A., &amp; Da Silva, C. B. (2020). <span class="nocase">Machine Learning for Seed Quality Classification: An Advanced Approach Using Merger Data from FT-NIR Spectroscopy and X-ray Imaging</span>. <em>Sensors</em>, <em>20</em>(15), 4319. <a href="https://doi.org/10.3390/s20154319">https://doi.org/10.3390/s20154319</a>
+</div>
+<div id="ref-elmasry-2019" class="csl-entry" role="listitem">
+ElMasry, G., Mandour, N., Al-Rejaie, S., Belin, E., &amp; Rousseau, D. (2019). <span class="nocase">Recent Applications of Multispectral Imaging in Seed Phenotyping and Quality Monitoring—An Overview</span>. <em>Sensors</em>, <em>19</em>(5), 1090. <a href="https://doi.org/10.3390/s19051090">https://doi.org/10.3390/s19051090</a>
+</div>
+<div id="ref-rao-2016" class="csl-entry" role="listitem">
+Rao, N. K., Dulloo, M. E., &amp; Engels, J. M. M. (2016). <span class="nocase">A review of factors that influence the production of quality seed for long-term conservation in genebanks</span>. <em>Genetic Resources and Crop Evolution</em>, <em>64</em>(5), 1061–1074. <a href="https://doi.org/10.1007/s10722-016-0425-9">https://doi.org/10.1007/s10722-016-0425-9</a>
+</div>
+<div id="ref-singh-2025" class="csl-entry" role="listitem">
+Singh, S. K., Jha, R., Pandey, S., Mohan, C., Chetna, N., Ghosh, S., Singh, S. K., Kumari, S., &amp; Singh, A. (2025). <span class="nocase">Artificial Intelligence-based Tools for Next-Generation Seed Quality Analysis</span>. <em>Crop Design</em>, 100094. <a href="https://doi.org/10.1016/j.cropd.2024.100094">https://doi.org/10.1016/j.cropd.2024.100094</a>
+</div>
+</div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

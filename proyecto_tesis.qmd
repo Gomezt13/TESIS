@@ -3,25 +3,50 @@ title: "Proyecto de tesis"
 author: "Euler Gomez Torres"
 format: html
 output-file: index
+bibliography: ref.bib
+csl: apa.csl # (Opcional: Para definir el estilo de citación)
 ---
 
-## Quarto
+## 1. Título
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+Aplicación de IA en imágenes para evaluar biofertilizantes en germinación de *Pisum sativum* L.
 
-## Running Code
+## 2. Problema de investigación
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+El incremento de la población mundial y el cambio climático  trae consigo un alza en la demanda de productos alimenticios generando una fuerte presión sobre el saturado sector agrícola (@singh-2025). Ante esto, la calidad de las semillas es un elemento crucial que está estrechamente relacionada con la tasa de germinación, el rendimiento de la planta y la tolerancia a los desafíos bióticos y abióticos, siendo crucial para la agricultura y el desarrollo de las plántulas, asegurando una alta producción y mayores ganancias (@de-medeiros-2020). Por lo tanto, la industria de las semillas busca constantemente formas de describir los atributos de calidad de las semillas con precisión, empleando varios métodos para verificar los parámetros de calidad de las semillas, como las pruebas de germinación, viabilidad y vigor (McDonald, 1998).
 
-```{r}
-1 + 1
-```
+Sin embargo, realizar pruebas ininterrumpidas puede ser un reto, debido a limitaciones tecnológicas y de tiempo, puede ser difícil evaluar directamente la salud, la viabilidad, los daños y el vigor de las semillas (@elmasry-2019). Puesto que las técnicas aplicadas para las pruebas de calidad de las semillas suelen verse afectadas por limitaciones de tiempo, problemas de subjetividad y la naturaleza destructiva (@rao-2016). En las pruebas tradicionales de la calidad de las semillas de arveja en un laboratorio, las personas inspeccionan visualmente cada semilla individualmente, lo cual es laborioso y requiere mucho tiempo. Por lo tanto, necesitamos estrategias eficaces que permitan determinar la calidad de las semillas de forma rápida, precisa, no destructiva y objetiva, ya que las técnicas visuales y manuales son costosas, requieren mucho tiempo y producen resultados poco fiables. Tanto la Asociación Internacional de Análisis de Semillas (ISTA) como la Asociación de Analistas Oficiales de Semillas (AOSA) reconocen la importancia de crear nuevos métodos para la evaluación rápida y no destructiva de la calidad de las semillas, con el fin de optimizar los análisis de calidad y reducir el coste total de las pruebas laboriosas (@boelt-2018). Por eso, se deberían integrar técnicas de evaluación de la calidad más precisas y rápidas con mínima participación humana para obtener la mayor cantidad de semillas aptas para la producción. 
 
-You can add options to executable code like this 
+En este contexto, se plantea la siguiente pregunta de investigación: ¿Cómo pueden los modelos de inteligencia artificial aplicados a la segmentación y clasificación de imágenes mejorar la evaluación del efecto de tres biofertilizantes sobre la germinación de semillas de *Pisum sativum* L.?
 
-```{r}
-#| echo: false
-2 * 2
-```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+## 3. Objetivos
+
+### 3.1. Objetivo general
+
+- Desarrollar un modelo de Deep Learning para evaluación del proceso de germinación de semillas de arveja.
+
+### 3.2. Objetivos específicos (de corresponder)
+
+- Desarrollo de un modelo de segmentación y clasificación para extracción de parámetros de imágenes de germinación de semillas de arveja.
+
+- Evaluar la precisión del modelo con los resultados obtenidos en un experimento de germinación en el cultivo de arvejas.
+
+## 4. Antecedentes de la investigación
+
+## 5. Hipótesis (de corresponder)
+
+## 6. Metodología
+
+### 6.1. Población, muestra y muestreo (de corresponder)
+
+### 6.2. Variables de estudio (de corresponder)
+
+### 6.3.Métodos
+
+### 6.4.Cronograma
+
+### 6.5.Análisis de datos
+
+## Refrencias bibliográficas
+
